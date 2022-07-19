@@ -25,5 +25,6 @@ function handleFormSubmit(event) {
     message,
   };
   console.log(form);
+  localStorage.clear();
   event.currentTarget.reset();
 }

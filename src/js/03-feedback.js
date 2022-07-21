@@ -8,10 +8,10 @@ populateFormOutput();
 const formData = {};
 
 function handleFormInput(event) {
-  // const email = event.currentTarget.elements.email.value;
-  // const message = event.currentTarget.elements.message.value;
-  formData[event.target.name] = event.target.value;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify({ formData }));
+  const email = event.currentTarget.elements.email.value;
+  const message = event.currentTarget.elements.message.value;
+  // formData[event.target.name] = event.target.value;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({ email, message }));
 }
 
 formRef.addEventListener('submit', handleFormSubmit);

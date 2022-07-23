@@ -18,6 +18,11 @@ formRef.addEventListener('submit', handleFormSubmit);
 
 function handleFormSubmit(event) {
   event.preventDefault();
+  const email = event.currentTarget.elements.email.value;
+  const message = event.currentTarget.elements.message.value;
+  if (email === '' || message === '') {
+    return alert('Заполните все поля');
+  }
   const saved = localStorage.getItem(STORAGE_KEY);
   const parsed = JSON.parse(saved);
   console.log(parsed);
